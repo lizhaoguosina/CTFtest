@@ -11,7 +11,7 @@ EXPOSE 22 80 3306
 COPY all.sql /home
 COPY default.tar.gz /home
 COPY first.sh /home
-COPY lnmp1.5.tar.gz /home
+COPY *lnmp1.5.tar.gz* /home
 COPY screeninstall.sh /home
 COPY second.sh /home
 COPY sources.list /etc/apt/sources.list
@@ -21,6 +21,7 @@ RUN apt -y --force-yes update \
     && apt -y --force-yes install tar wget expect curl gcc \
     && apt -y --force-yes autoremove \
     && chmod 777 /home/*.sh \
+    && mv /home/*lnmp* /home/lnmp1.5.tar.gz \
     && /home/screeninstall.sh \
     && /home/second.sh \
     && rm -rf /home/*.tar.gz \
