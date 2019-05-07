@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+  <form action="flag.php" method="post">
+  	<h2>请选择要提交的flag类型，不要选错哦</h2>
+  	<select name="flagselect" size="1">
+  		<option value="flag0">flag_sqli_dvwa{}</option>
+  		<option value="flag1">flag_01{}</option>
+  		<option value="flag2">flag_02{}</option>
+  	</select>
+  	<h2>请输入提交的flag(格式不要错误哦)</h2>
+  	<input type="text" name="flag"  />
+  	<input type="submit" value="提交" />
+  </form>
+</body>
