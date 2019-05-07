@@ -24,7 +24,9 @@ docker安装可以使用installdocker.sh进行安装
 文件需要在ubuntu16.04+以上运行。安装完docker之后在/etc/docker/daemon.json中加入以下内容：
 
 {
+
   "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
+
 }
 
 之后重启docker服务
