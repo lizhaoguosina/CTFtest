@@ -21,7 +21,6 @@ RUN apt -y --force-yes update \
     && apt -y --force-yes install tar wget expect curl gcc \
     && apt -y --force-yes autoremove \
     && chmod 777 /home/*.sh \
-    && mv /home/*lnmp* /home/lnmp1.5.tar.gz \
     && /home/screeninstall.sh \
     && /home/second.sh \
     && rm -rf /home/*.tar.gz \
