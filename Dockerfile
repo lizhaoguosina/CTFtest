@@ -16,10 +16,10 @@ COPY screeninstall.sh /home
 COPY second.sh /home
 COPY sources.list /etc/apt/sources.list
 # 使用中科大的镜像源文件替代原有镜像文件
-RUN apt -y --force-yes update \
-    && apt -y --force-yes upgrade \
-    && apt -y --force-yes install tar wget expect curl gcc \
-    && apt -y --force-yes autoremove \
+RUN apt -y update \
+    && apt -y upgrade \
+    && apt -y install tar wget expect curl gcc \
+    && apt -y autoremove \
     && chmod 777 /home/*.sh \
     && /home/screeninstall.sh \
     && /home/second.sh \
