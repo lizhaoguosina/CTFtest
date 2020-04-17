@@ -35,8 +35,8 @@ RUN apt -y update \
 COPY flag2.txt /home/flag
 COPY third.sh /home
 COPY php.ini /usr/local/php/etc/
-RUN service mysql restart \
-    && service nginx restart \
-    && /usr/local/php/sbin/php-fpm restart 
+RUN service mysql start \
+    && service nginx start \
+    && /usr/local/php/sbin/php-fpm start 
 ENTRYPOINT [ "/bin/bash","/home/third.sh" ]
 # 启动后运行third脚本

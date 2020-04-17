@@ -1,2 +1,2 @@
 #!/bin/bash
-service mysql restart && service nginx restart && /usr/local/php/sbin/php-fpm restart && read qqq
+service mysql start && service nginx start && /usr/local/php/sbin/php-fpm start && read qqq
