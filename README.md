@@ -19,19 +19,21 @@ mysql为5.1.73
 
 ### 可选部分
 
-docker安装可以使用installdocker.sh进行安装
+~~docker安装可以使用installdocker.sh进行安装~~
 
-文件需要在ubuntu16.04+以上运行。安装完docker之后在/etc/docker/daemon.json中加入以下内容：
+~~文件需要在ubuntu16.04+以上运行。安装完docker之后在/etc/docker/daemon.json中加入以下内容：~~
 
-{
+~~{~~
 
-  "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
+  ~~"registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]~~
 
-}
+~~}~~
 
-之后重启docker服务
+~~之后重启docker服务~~
 
-sudo systemctl restart docker
+~~sudo systemctl restart docker~~
+
+建议根据docker官网文档进行安装，阿里云提供镜像加速
 
 ### 安装过程
 
